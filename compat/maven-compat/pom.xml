@@ -147,11 +147,25 @@ under the License.
       <artifactId>plexus-xml</artifactId>
     </dependency>
 
+    <!-- Backward compatibility dependencies from Maven 3.x (issue #11299) -->
     <dependency>
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
-      <scope>provided</scope>
+      <!-- only for backward compatibility -->
     </dependency>
+    <dependency>
+      <groupId>com.google.inject</groupId>
+      <artifactId>guice</artifactId>
+      <classifier>classes</classifier>
+      <!-- only for backward compatibility -->
+    </dependency>
+    <dependency>
+      <groupId>aopalliance</groupId>
+      <artifactId>aopalliance</artifactId>
+      <version>1.0</version>
+      <!-- only for backward compatibility -->
+    </dependency>
+
     <dependency>
       <groupId>org.eclipse.sisu</groupId>
       <artifactId>org.eclipse.sisu.inject</artifactId>
@@ -172,13 +186,6 @@ under the License.
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.google.inject</groupId>
-      <artifactId>guice</artifactId>
-      <classifier>classes</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
